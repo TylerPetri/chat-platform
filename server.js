@@ -9,8 +9,6 @@ const { addUser, removeUser, getUser, getUsersInRoom } = require('./server/users
 
 const PORT = process.env.PORT || 3001
 
-const router = require('./server/router');
-
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
