@@ -6,11 +6,12 @@ import TextContainer from '../TextContainer/TextContainer';
 import Messages from '../Messages/Messages';
 import InfoBar from '../InfoBar/InfoBar';
 import Input from '../Input/Input';
+import Rooms from '../Rooms/Rooms'
 
 import './Chat.css';
 
-const ENDPOINT = 'https://chat-platform-t.herokuapp.com/'
-// const ENDPOINT = 'localhost:3001'
+// const ENDPOINT = 'https://chat-platform-t.herokuapp.com/'
+const ENDPOINT = 'localhost:3001'
 
 let socket;
 
@@ -18,6 +19,7 @@ const Chat = ({ location }) => {
   const [name, setName] = useState('');
   const [room, setRoom] = useState('');
   const [users, setUsers] = useState('');
+  const [rooms, setRooms] = useState('');
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
 
@@ -41,8 +43,9 @@ const Chat = ({ location }) => {
       setMessages(messages => [ ...messages, message ]);
     });
     
-    socket.on("roomData", ({ users }) => {
+    socket.on("roomData", ({ users, rooms }) => {
       setUsers(users);
+      setRooms(rooms)
     });
 }, []);
 
@@ -55,13 +58,19 @@ const Chat = ({ location }) => {
   }
 
   return (
-    <div className="outerContainer">
-      <div className="container">
+    <div className="app">
+      <div className="outerContainer">
           <InfoBar room={room} />
-          <Messages messages={messages} name={name} />
-          <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
+        <div className="all">
+          <div className="chatContainer">
+              <Messages messages={messages} name={name} />
+              <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
+          </div>
+          <div className="usersContainer">
+            <TextContainer users={users}/>
+          </div>
+        </div>
       </div>
-      <TextContainer users={users}/>
     </div>
   );
 }
