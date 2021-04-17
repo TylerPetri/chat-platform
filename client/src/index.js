@@ -1,6 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { StoreProvider } from './utils/GlobalStore'
 
 import App from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+    <React.StrictMode>
+      <StoreProvider>
+        <App />
+      </StoreProvider>
+    </React.StrictMode>,
+    document.getElementById('root')
+  );

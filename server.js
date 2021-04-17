@@ -1,11 +1,13 @@
+require("dotenv").config();
+
 const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
 const cors = require('cors');
 
-const { addUser, removeUser, getUser, getUsersInRoom } = require('./users');
+const { addUser, removeUser, getUser, getUsersInRoom } = require('./server/users');
 
-const router = require('./router');
+const router = require('./server/router');
 
 const app = express();
 const server = http.createServer(app);
