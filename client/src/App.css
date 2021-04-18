@@ -5,3 +5,11 @@
     height: 100vh;
     background-color: #1A1A1D;
   }
+
+.appBg {
+  background-color: #1A1A1D;
+  height: min-content max-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

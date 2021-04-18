@@ -1,27 +1,60 @@
 .form {
   display: flex;
-  border-top: 2px solid #D3D3D3;
 }
 
 .input {
-  border: none;
-  border-radius: 0;
-  padding: 5%;
-  width: 80%;
+  border-top: 13px solid rgb(33, 47, 253);
+  border-bottom: 13px solid rgb(33, 47, 253);
+  border-left: none;
+  border-right: none;
+  width: 90%;
   font-size: 1.2em;
+  background-color: black;
+  caret-color: rgb(253, 0, 211);
+  color: rgb(253, 0, 211);
+  height: 60px;
+  font-family: 'Chakra Petch' !important;
+  font-weight: 300
 }
 
 input:focus, textarea:focus, select:focus{
   outline: none;
 }
 
+.chatName {
+  color: rgb(253, 0, 211);
+  min-width: max-content;
+  margin: 0;
+  padding: 0 8px 0 40px;
+  border-top: 13px solid rgb(33, 47, 253);
+  border-bottom: 13px solid rgb(33, 47, 253);
+  border-left: none;
+  border-right: none;
+  background-color: black;
+  align-items: center;
+  display: flex;
+  font-family: 'Chakra Petch' !important;
+  font-weight: 300
+}
+
 .sendButton {
-  color: #fff !important;
-  text-transform: uppercase;
+  color: white !important;
   text-decoration: none;
-  background: #2979FF;
-  padding: 20px;
+  background: black;
   display: inline-block;
-  border: none;
-  width: 20%;
+  border-top: 13px solid rgb(33, 47, 253);
+  border-bottom: 13px solid rgb(33, 47, 253);
+  border-left: none;
+  border-right: none;
+  width: 10%;
+}
+
+.sendButton:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 700px){
+  .chatName {
+    padding: 0 8px
+  }
 }

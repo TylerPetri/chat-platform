@@ -1,18 +1,36 @@
-.messageBox {
+/* .messageBox {
   background: #F3F3F3;
   border-radius: 20px;
   padding: 5px 20px;
   color: white;
   display: inline-block;
   max-width: 80%;
-}
+} */
 
-.messageText {
+.messageTextSend {
   width: 100%;
   letter-spacing: 0;
   float: left;
   font-size: 1.1em;
   word-wrap: break-word;
+  padding: 0 10px;
+  color: rgb(253, 0, 211);
+  font-family: 'Chakra Petch' !important;
+  font-weight: 300;
+  margin: 5px
+}
+
+.messageTextReceive {
+  width: 100%;
+  letter-spacing: 0;
+  float: left;
+  font-size: 1.1em;
+  word-wrap: break-word;
+  padding: 0 10px;
+  color: rgb(47, 255, 75);
+  font-family: 'Chakra Petch' !important;
+  font-weight: 300;
+  margin: 5px
 }
 
 .messageText img {
@@ -22,8 +40,7 @@
 .messageContainer {
   display: flex;
   justify-content: flex-end;
-  padding: 0 5%;
-  margin-top: 3px;
+  padding: 0 5% 0 1%;
 }
 
 .sentText {
@@ -32,6 +49,9 @@
   font-family: Helvetica;
   color: #828282;
   letter-spacing: 0.3px;
+  font-family: 'Chakra Petch' !important;
+  font-weight: 700;
+  margin: 5px
 }
 
 .pl-10 {
