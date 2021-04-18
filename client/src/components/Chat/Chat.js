@@ -10,8 +10,8 @@ import Rooms from '../Rooms/Rooms'
 
 import './Chat.css';
 
-// const ENDPOINT = 'https://chat-platform-t.herokuapp.com/'
-const ENDPOINT = 'localhost:3001'
+const ENDPOINT = 'https://chatch4n.herokuapp.com/'
+// const ENDPOINT = 'localhost:3001'
 
 let socket;
 
