@@ -1,1 +1,1 @@
-https://chat-platform-t.herokuapp.com/
+https://chatch4n.herokuapp.com/
