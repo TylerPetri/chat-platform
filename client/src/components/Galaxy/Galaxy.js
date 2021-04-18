@@ -12,9 +12,9 @@ function Galaxy(){
                 <ReactPlayer 
                 className="galaxyVid"
                 url="https://www.youtube.com/watch?v=Z6FPJOgfCkc&list=RDZ6FPJOgfCkc&start_radio=1"
-                // playing={true}
+                playing={true}
                 width='70%'
-                // alt="Galaxy supernova by girls generation"
+                alt="Galaxy supernova by girls generation"
                 />
                 <div className="downdown"><AiOutlineDown/><AiOutlineDown/><AiOutlineDown/><AiOutlineDown/></div>
                 <img src={Aquaman} alt="Aquaman" className="aquapic"/>
