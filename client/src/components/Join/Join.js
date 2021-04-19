@@ -18,7 +18,7 @@ function SignIn() {
     async function getData() {
       // var counts = {}
       const data = await fetchJSON('/api/rooms')
-      const names = await data.map(({room})=> {return (room.replace(/['"]+/g, ''))})
+      const names = data.map(({room})=> {return (room.replace(/['"]+/g, ''))})
       // rooms.map(function(x) {counts[x] = (counts[x] || 0)+1})
       names.push('galaxy', 'shit 4chan says', 'literature', 'paranormal', 'siblings')
       // setCounts('galaxy', 'shit 4chan says', 'literature', 'paranormal', 'siblings')
@@ -30,7 +30,7 @@ function SignIn() {
   async function refreshList() {
     // var counts = {}
     const data = await fetchJSON('/api/rooms')
-    const names = await data.map(({room})=> {return (room.replace(/['"]+/g, ''))})
+    const names = data.map(({room})=> {return (room.replace(/['"]+/g, ''))})
     // rooms.map(function(x) {counts[x] = (counts[x] || 0)+1})
     // setCounts(counts)
     names.push('galaxy', 'shit 4chan says', 'literature', 'paranormal', 'siblings')

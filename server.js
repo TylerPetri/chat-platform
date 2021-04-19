@@ -27,7 +27,9 @@ if (process.env.NODE_ENV === 'production') {
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/chat", {
   useNewUrlParser: true,
+  useUnifiedTopology: true,
   useCreateIndex: true,
+  useFindAndModify: false
 });
 
 app.use(require("./server/router.js"));
