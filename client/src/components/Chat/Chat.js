@@ -11,8 +11,8 @@ import { useStoreContext } from '../../utils/GlobalStore'
 
 import './Chat.css';
 
-// const ENDPOINT = 'https://chatch4n.herokuapp.com/'
-const ENDPOINT = 'localhost:3001'
+const ENDPOINT = 'https://chatch4n.herokuapp.com/'
+// const ENDPOINT = 'localhost:3001'
 
 let socket;
 
