@@ -15,10 +15,10 @@ function SignIn() {
   const roomRef = useRef()
 
   useEffect(()=>{
-    async function getData() {
+    function getData() {
       // var counts = {}
-      const data = await fetchJSON('/api/rooms')
-      const names = data.map(({room})=> {return (room.replace(/['"]+/g, ''))})
+      // const data = await fetchJSON('/api/rooms')
+      // const names = data.map(({room})=> {return (room.replace(/['"]+/g, ''))})
       // rooms.map(function(x) {counts[x] = (counts[x] || 0)+1})
       names.push('galaxy', 'shit 4chan says', 'literature', 'paranormal', 'siblings')
       // setCounts('galaxy', 'shit 4chan says', 'literature', 'paranormal', 'siblings')
@@ -27,15 +27,15 @@ function SignIn() {
     getData()
   }, [])
 
-  async function refreshList() {
-    // var counts = {}
-    const data = await fetchJSON('/api/rooms')
-    const names = data.map(({room})=> {return (room.replace(/['"]+/g, ''))})
-    // rooms.map(function(x) {counts[x] = (counts[x] || 0)+1})
-    // setCounts(counts)
-    names.push('galaxy', 'shit 4chan says', 'literature', 'paranormal', 'siblings')
-    setRooms(names)
-  }
+  // async function refreshList() {
+  //   // var counts = {}
+  //   const data = await fetchJSON('/api/rooms')
+  //   const names = data.map(({room})=> {return (room.replace(/['"]+/g, ''))})
+  //   // rooms.map(function(x) {counts[x] = (counts[x] || 0)+1})
+  //   // setCounts(counts)
+  //   names.push('galaxy', 'shit 4chan says', 'literature', 'paranormal', 'siblings')
+  //   setRooms(names)
+  // }
 
   function inputRoom(room) {
     roomRef.current.value = room.charAt(0).toUpperCase() + room.slice(1)
