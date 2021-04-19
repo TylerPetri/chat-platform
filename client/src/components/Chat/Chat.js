@@ -8,7 +8,6 @@ import InfoBar from '../InfoBar/InfoBar';
 import Input from '../Input/Input';
 
 import './Chat.css';
-import { useStoreContext } from "../../utils/GlobalStore";
 
 // const ENDPOINT = 'https://chatch4n.herokuapp.com/'
 const ENDPOINT = 'localhost:3001'
@@ -21,7 +20,6 @@ const Chat = ({ location }) => {
   const [users, setUsers] = useState('');
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-  const [{ rooms }, dispatch] = useStoreContext()
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
@@ -45,7 +43,6 @@ const Chat = ({ location }) => {
     
     socket.on("roomData", ({ users, room }) => {
       setUsers(users);
-      dispatch({type: 'ADD_ROOM', data:room})
     });
 }, []);
 

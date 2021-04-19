@@ -23,5 +23,16 @@ router.post('/api/rooms', ( req, res ) => {
     })
 })
 
+router.delete('/api/rooms/:room', ( req, res ) => {
+    const room = JSON.stringify(req.params.room)
+    Rooms.deleteOne({room:room}, ( err, result ) => {
+        if (err) {
+            res.send(err)
+        } else {
+            res.send(result)
+        }
+    })
+})
+
 
 module.exports = router

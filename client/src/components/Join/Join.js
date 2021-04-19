@@ -17,10 +17,11 @@ export default function SignIn() {
     async function getData() {
       var counts = {}
       const data = await fetchJSON('/api/rooms')
-      const rooms = data.map(({room})=> {return (room.replace(/['"]+/g, ''))})
+      const names = data.map(({room})=> {return (room.replace(/['"]+/g, ''))})
       rooms.map(function(x) {counts[x] = (counts[x] || 0)+1})
       setCounts(counts)
-      setRooms(rooms)
+      names.push('Galaxy', 'Shit 4chan says', 'Literature', 'Paranormal', 'Siblings')
+      setRooms(names)
     }
     getData()
   }, [])
@@ -35,14 +36,10 @@ export default function SignIn() {
     await fetchJSON('/api/rooms', 'post', {data})
   }
 
-  function test(){
-    console.log(counts)
-  }
-
   return (
     <div className="joinOuterContainer">
       <div className="joinInnerContainer">
-        <img src={logo} alt="logo" className="logo" onClick={test}></img>
+        <img src={logo} alt="logo" className="logo"></img>
         <div>
           <input placeholder="Name" className="joinInput" type="text" onChange={(event) => setName(event.target.value)} />
         </div>
