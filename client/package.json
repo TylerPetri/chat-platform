@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "http://localhost:3001",
   "dependencies": {
+    "axios": "^0.21.1",
     "fs": "0.0.1-security",
     "query-string": "^6.8.2",
     "react": "^16.9.0",

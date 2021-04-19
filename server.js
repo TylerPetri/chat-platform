@@ -4,6 +4,7 @@ const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
 const cors = require('cors');
+const mongoose = require('mongoose')
 
 const { addUser, removeUser, getUser, getUsersInRoom } = require('./server/users');
 
@@ -24,6 +25,11 @@ if (process.env.NODE_ENV === 'production') {
     app.use( express.static('public') )
 }
 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/chat", {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+});
+
 app.use(require("./server/router.js"));
 
 io.on('connect', (socket) => {
@@ -37,7 +43,8 @@ io.on('connect', (socket) => {
     socket.emit('message', { user: 'admin', text: `${user.name}, welcome to room ${user.room}.`});
     socket.broadcast.to(user.room).emit('message', { user: 'admin', text: `${user.name} has joined!` });
 
-    io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room) });
+    io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room)});
+    io.emit('room', {room: user.room})
 
     callback();
   });

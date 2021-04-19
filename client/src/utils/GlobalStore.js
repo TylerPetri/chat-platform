@@ -2,7 +2,7 @@ import React, { createContext, useReducer, useContext } from "react"
 
 // any variables we depend on for UI/flow we must pre-set
 const initialData = {
-  nav: false, opa: false, rightMarg: false
+  nav: false, opa: false, rightMarg: false, rooms: ['transa','global']
 }
 
 /*! IMPORTANT all your reducer functionality goes here */
@@ -12,6 +12,8 @@ const dataReducer = (state, action) => {
       return { ...state, opa:false, nav:false, rightMarg:false }
     case "NAV_OPEN":
       return { ...state, nav:true, opa:true, rightMarg:true}
+    case "ADD_ROOM":
+      return { ...state, rooms: [...state.rooms, action.data] }
     default:
       console.log(`Invalid action type: ${action.type}`)
       return state

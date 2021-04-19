@@ -2,7 +2,7 @@
 const rooms = ['Transportation', 'Siblings', 'Paranormal', 'Literature', 'Shit 4chan Says']
 
 const addRoom = ({ id, room }) => {
-    room = room.trim().toLowerCase();
+    room = room.trim();
 
     const existingRoom = rooms.find((a) => a.room === room);
 
