@@ -67,7 +67,9 @@ function SignIn() {
         <div className="containerHead">
           <button to="/" style={{visibility: 'hidden', padding: '10px'}}><AiOutlineReload/></button>
           <h2 className="roomsHeader">Public Rooms</h2>
-          <button className="reloadBtn" onClick={refreshList}><AiOutlineReload/></button>
+          <button className="reloadBtn" 
+          // onClick={refreshList}
+          ><AiOutlineReload/></button>
         </div>
           <h4>{aUsers} active users</h4>
         <ul className="roomsUl">
