@@ -6,6 +6,8 @@ import TextContainer from '../TextContainer/TextContainer';
 import Messages from '../Messages/Messages';
 import InfoBar from '../InfoBar/InfoBar';
 import Input from '../Input/Input';
+import UserCont from '../UserContainer/UserContainer'
+import { useStoreContext } from '../../utils/GlobalStore'
 
 import './Chat.css';
 
@@ -20,6 +22,7 @@ const Chat = ({ location }) => {
   const [users, setUsers] = useState('');
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
+  const [{ nav }] = useStoreContext()
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
@@ -63,8 +66,11 @@ const Chat = ({ location }) => {
           <div className="usersContainer">
             <TextContainer users={users}/>
           </div>
-          <div className="chatContainer">
+          <div className="chatContainer" style={{display: nav ? 'none' : null}}>
               <Messages messages={messages} name={name} />
+          </div>
+          <div className="chatContainer" style={{display: nav ? 'block' : 'none'}}>
+              <UserCont users={users}/>
           </div>
           </div>
               <Input name={name} message={message} setMessage={setMessage} sendMessage={sendMessage} />

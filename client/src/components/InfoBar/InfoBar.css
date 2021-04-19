@@ -25,3 +25,28 @@
 .onlineIcon {
   margin-right: 5%;
 }
+
+.asdf {
+  display: none;
+  margin-left: 15px;
+  background: none;
+  color: rgb(179, 179, 179);
+  border: none;
+  height:30px;
+  width: 30px;
+}
+
+.asdf:hover {
+  cursor: pointer
+}
+
+.userIcon {
+  height: 30px;
+  width: 30px;
+}
+
+@media (max-width: 700px){
+  .asdf {
+    display: block
+  }
+}
