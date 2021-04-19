@@ -17,7 +17,7 @@ html, body {
 .joinOuterContainer {
   display: flex;
   text-align: center;
-  height: 100vh;
+  height: 100%;
   align-items: center;
   background-color: #1A1A1D;
   flex-direction: column;
@@ -130,8 +130,6 @@ html, body {
   .joinInnerContainer {
     max-width: 90%;
   }
-
-
 }
 
 button:focus {
