@@ -6,7 +6,7 @@ import { AiOutlineReload } from 'react-icons/ai'
 import fetchJSON from '../../utils/API'
 import './Join.css';
 
-export default function SignIn() {
+function SignIn() {
   const [name, setName] = useState('');
   const [room, setRoom] = useState('');
   const [rooms, setRooms] = useState([])
@@ -18,7 +18,7 @@ export default function SignIn() {
     async function getData() {
       // var counts = {}
       const data = await fetchJSON('/api/rooms')
-      const names = data.map(({room})=> {return (room.replace(/['"]+/g, ''))})
+      const names = await data.map(({room})=> {return (room.replace(/['"]+/g, ''))})
       // rooms.map(function(x) {counts[x] = (counts[x] || 0)+1})
       names.push('galaxy', 'shit 4chan says', 'literature', 'paranormal', 'siblings')
       // setCounts('galaxy', 'shit 4chan says', 'literature', 'paranormal', 'siblings')
@@ -30,7 +30,7 @@ export default function SignIn() {
   async function refreshList() {
     // var counts = {}
     const data = await fetchJSON('/api/rooms')
-    const names = data.map(({room})=> {return (room.replace(/['"]+/g, ''))})
+    const names = await data.map(({room})=> {return (room.replace(/['"]+/g, ''))})
     // rooms.map(function(x) {counts[x] = (counts[x] || 0)+1})
     // setCounts(counts)
     names.push('galaxy', 'shit 4chan says', 'literature', 'paranormal', 'siblings')
@@ -84,3 +84,5 @@ export default function SignIn() {
     </div>
   );
 }
+
+export default SignIn
