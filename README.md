@@ -9,6 +9,7 @@ https://chatch4n.herokuapp.com/
 
 ## Usage
 
+![Usage](https://media.giphy.com/media/YNy9NsmSvakoXoTi3L/giphy.gif)
 
 ## License
 
