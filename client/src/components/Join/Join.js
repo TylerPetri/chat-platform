@@ -60,7 +60,7 @@ export default function SignIn() {
           <input placeholder="Room" className="joinInput mt-20" type="text" ref={roomRef} onChange={(event) => setRoom(event.target.value)} />
         </div>
         <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={room.trim().toLowerCase() === 'galaxy' ? `/galaxy` : `/chat?name=${name}&room=${room}`}>
-          <button className={'button mt-20'} type="submit" onClick={post}>{rooms.includes(room.trim().toLowerCase()) ? 'Join' : 'Create'}</button>
+          <button className={'button mt-20'} onClick={post}>{rooms.includes(room.trim().toLowerCase()) ? 'Join' : 'Create'}</button>
         </Link>
       </div>
       <div className="roomList">
