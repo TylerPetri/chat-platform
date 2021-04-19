@@ -58,3 +58,9 @@ input:focus, textarea:focus, select:focus{
     padding: 0 8px
   }
 }
+
+@media (max-width: 500px){
+  .chatName {
+    display: none;
+  }
+}
