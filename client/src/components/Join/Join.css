@@ -65,6 +65,27 @@ html, body {
   margin-bottom: 50px;
 }
 
+.containerHead {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.reloadBtn {
+  float: right;
+  margin: 10px;
+  padding: 0;
+  height: max-content;
+  width: max-content;
+  background: none;
+  border: none;
+  color:purple;
+}
+
+.reloadBtn:hover {
+  cursor: pointer
+}
+
 .roomsHeader {
   color: rgb(179, 24, 89);
 }

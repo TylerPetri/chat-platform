@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Link } from "react-router-dom";
 import logo from '../../icons/AwesomeFace.png'
+import { AiOutlineReload } from 'react-icons/ai'
 
 import fetchJSON from '../../utils/API'
 import './Join.css';
@@ -26,6 +27,16 @@ export default function SignIn() {
     getData()
   }, [])
 
+  async function refreshList() {
+    var counts = {}
+    const data = await fetchJSON('/api/rooms')
+    const names = data.map(({room})=> {return (room.replace(/['"]+/g, ''))})
+    rooms.map(function(x) {counts[x] = (counts[x] || 0)+1})
+    setCounts(counts)
+    names.push('Galaxy', 'Shit 4chan says', 'Literature', 'Paranormal', 'Siblings')
+    setRooms(names)
+  }
+
   function inputRoom(room) {
     roomRef.current.value = room
     setRoom(room)
@@ -35,6 +46,8 @@ export default function SignIn() {
     const data = roomRef.current.value
     await fetchJSON('/api/rooms', 'post', {data})
   }
+
+  const aUsers = rooms.length-5
 
   return (
     <div className="joinOuterContainer">
@@ -51,8 +64,12 @@ export default function SignIn() {
         </Link>
       </div>
       <div className="roomList">
+        <div className="containerHead">
+          <button to="/" style={{visibility: 'hidden', padding: '10px'}}><AiOutlineReload/></button>
           <h2 className="roomsHeader">Public Rooms</h2>
-          <h4>{rooms.length} active users</h4>
+          <button className="reloadBtn" onClick={refreshList}><AiOutlineReload/></button>
+        </div>
+          <h4>{aUsers} active users</h4>
         <ul className="roomsUl">
         {rooms
           .sort((a,b)=>a.localeCompare(b))
