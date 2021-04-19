@@ -17,6 +17,27 @@
   align-items: center;
 }
 
+.escape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  height: 40px;
+  background-color: purple;
+  color: yellow;
+  border: purple;
+}
+
+.escape:hover {
+  background-color: orange;
+  color: red;
+}
+
+.esIc {
+  height: 30px;
+  width: 30px;
+}
+
 .downdown {
     color: white;
     display: flex;

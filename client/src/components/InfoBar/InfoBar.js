@@ -12,7 +12,7 @@ const InfoBar = ({ room }) => {
   const [{ nav }, dispatch] = useStoreContext()
 
   function deleteRoom(){
-    fetchJSON(`/api/rooms/${room}`, 'delete')
+    fetchJSON(`/api/rooms/${room.toLowerCase()}`, 'delete')
   }
 
   function toggle(){
@@ -22,7 +22,7 @@ const InfoBar = ({ room }) => {
   return (
     <div className="infoBar">
       <div className="leftInnerContainer">
-        <h3>{room.substring(0,10)}</h3>
+        <h3>{room.substring(0,10).charAt(0).toUpperCase() + room.slice(1)}</h3>
       <button className="asdf">
         <FaUsers className="userIcon" onClick={toggle}/>
       </button>

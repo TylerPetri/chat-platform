@@ -14,7 +14,7 @@ function UserContainer({ users }){
               <h3>
                 {users.map(({name}) => (
                   <div key={name} className="activeItem">
-                    {name.substring(0,10)}
+                    {name.substring(0,10).charAt(0).toUpperCase() + name.slice(1)}
                   </div>
                 ))}
               </h3>

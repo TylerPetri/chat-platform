@@ -7,7 +7,7 @@ function fetchJSON( url, method='get', data={} ){
         }
     }
     if( method === 'post' || method === 'put' ) {
-        fetchOptions.body = JSON.stringify( data )
+        fetchOptions.body = JSON.stringify( data ).toLowerCase()
     }
   
     return fetch( url,fetchOptions ).then( res=>res.json() )

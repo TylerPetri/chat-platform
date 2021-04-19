@@ -5,7 +5,7 @@ import './Input.css';
 
 const Input = ({ name, setMessage, sendMessage, message }) => (
   <form className="form">
-    <h3 className="chatName">{name.substring(0,10)}<span style={{color: 'rgb(47, 255, 75)', paddingLeft: '4px', fontWeight: 'bold'}}> - - > </span></h3>
+    <h3 className="chatName">{name.substring(0,10).charAt(0).toUpperCase() + name.slice(1)}<span style={{color: 'rgb(47, 255, 75)', paddingLeft: '4px', fontWeight: 'bold'}}> - - > </span></h3>
     <input
       spellCheck="false"
       className="input"
