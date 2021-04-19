@@ -9,23 +9,23 @@ import './Join.css';
 function SignIn() {
   const [name, setName] = useState('');
   const [room, setRoom] = useState('');
-  const [rooms, setRooms] = useState([])
+  const [rooms, setRooms] = useState(['galaxy', 'shit 4chan says', 'literature', 'paranormal', 'siblings'])
   // const [counts, setCounts] = useState({})
 
   const roomRef = useRef()
 
-  useEffect(()=>{
-    function getData() {
-      // var counts = {}
-      // const data = await fetchJSON('/api/rooms')
-      // const names = data.map(({room})=> {return (room.replace(/['"]+/g, ''))})
-      // rooms.map(function(x) {counts[x] = (counts[x] || 0)+1})
-      names.push('galaxy', 'shit 4chan says', 'literature', 'paranormal', 'siblings')
-      // setCounts('galaxy', 'shit 4chan says', 'literature', 'paranormal', 'siblings')
-      setRooms(names)
-    }
-    getData()
-  }, [])
+  // useEffect(()=>{
+  //   async function getData() {
+  //     // var counts = {}
+  //     const data = await fetchJSON('/api/rooms')
+  //     const names = data.map(({room})=> {return (room.replace(/['"]+/g, ''))})
+  //     // rooms.map(function(x) {counts[x] = (counts[x] || 0)+1})
+  //     names.push('galaxy', 'shit 4chan says', 'literature', 'paranormal', 'siblings')
+  //     // setCounts('galaxy', 'shit 4chan says', 'literature', 'paranormal', 'siblings')
+  //     setRooms(names)
+  //   }
+  //   getData()
+  // }, [])
 
   // async function refreshList() {
   //   // var counts = {}
