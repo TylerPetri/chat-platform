@@ -4,7 +4,7 @@
 
 ## Description
 
-Create a room! Join a room! Can see the users that are in the same room, and messages aren't saved! Some rooms are a surprise
+Privacy! Nostalgia? Using socket.io, we have realtime chat that don't save messages (don't reload or they're gone). Create any room you like, visit existing rooms... some are surprisingly supernova
 https://chatch4n.herokuapp.com/
 
 ## Usage
