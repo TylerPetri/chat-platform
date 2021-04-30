@@ -25,4 +25,4 @@ There are many ways in which you can participate in the project, for example:
 
 ## Questions
 
-For any additional questions see my [GitHub profile](http://github.com/tylerpetri) or contact tylerpetri@hotmail.com
+For any additional questions see my [GitHub profile](http://github.com/tylerpetri) or contact tylerpetri93@gmail.com
