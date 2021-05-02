@@ -6,15 +6,21 @@
 
 Privacy! Nostalgia? Using socket.io, we have realtime chat that don't save messages (don't reload or they're gone). Create any room you like, visit existing rooms... some are surprisingly supernova
 
+## Deployed Applicaiton
+
 https://chatch4n.herokuapp.com/
 
 ## Usage
 
 ![Usage](https://media.giphy.com/media/YNy9NsmSvakoXoTi3L/giphy.gif)
 
+## Running the tests
+
+There were no automated tests during the process of this application.
+
 ## License
 
-MIT
+This project is licensed under the MIT License
 
 ## Contributing
 
