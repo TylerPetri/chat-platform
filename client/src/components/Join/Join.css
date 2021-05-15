@@ -43,7 +43,7 @@ html, body {
     color: #fff !important;
     text-transform: uppercase;
     text-decoration: none;
-    background: #2979FF;
+    background: #347dfc;
     padding: 20px;
     border-radius: 5px;
     display: inline-block;
@@ -51,8 +51,37 @@ html, body {
     width: 100%;
 }
 
+.playsnakeBTN {
+  color: #fff !important;
+  text-decoration: none;
+  background: #347dfc;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  width: 100%;
+  margin-top: 10px;
+}
+
 .button:hover {
   cursor: pointer
+}
+
+.playsnakeBTN:hover {
+  cursor: pointer;
+}
+
+.psT {
+  width: max-content;
+  text-decoration: none;
+  display: inline;
+  padding-bottom: 10px;
+}
+
+.snakeIcon {
+  height: 35px;
+  width: 35px;
+  margin: 0 10px;
 }
 
 .roomList {
@@ -60,7 +89,7 @@ html, body {
   max-width: 500px;
   height: 300px;
   background-color: rgb(253, 128, 165);
-  margin-top: 50px;
+  margin-top: 25px;
   text-align: center;
   margin-bottom: 50px;
 }

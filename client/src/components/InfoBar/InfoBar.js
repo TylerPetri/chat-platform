@@ -4,6 +4,7 @@ import closeIcon from '../../icons/closeIcon.png';
 import fetchJSON from '../../utils/API'
 import { useStoreContext } from '../../utils/GlobalStore'
 import { FaUsers } from 'react-icons/fa'
+import { MdChat } from 'react-icons/md'
 
 import './InfoBar.css';
 
@@ -24,7 +25,11 @@ const InfoBar = ({ room }) => {
       <div className="leftInnerContainer">
         <h3>{room.substring(0,10).charAt(0).toUpperCase() + room.slice(1)}</h3>
       <button className="asdf">
+        {nav ? 
+        <MdChat className="userIcon" onClick={toggle}/>
+        : 
         <FaUsers className="userIcon" onClick={toggle}/>
+      }
       </button>
       </div>
      

@@ -2,6 +2,8 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Link } from "react-router-dom";
 import logo from '../../icons/AwesomeFace.png'
 import { AiOutlineReload } from 'react-icons/ai'
+import { GiSandSnake } from 'react-icons/gi'
+import psg from '../../assets/playsnakegame.PNG'
 
 import fetchJSON from '../../utils/API'
 import './Join.css';
@@ -47,7 +49,7 @@ function SignIn() {
     if(name.length > 0 && room.length > 0) {await fetchJSON('/api/rooms', 'post', {data})}
   }
 
-  const aUsers = rooms.length-5
+  const aUsers = rooms.length-2
 
   return (
     <div className="joinOuterContainer">
@@ -61,6 +63,13 @@ function SignIn() {
         </div>
         <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={room.trim().toLowerCase() === 'galaxy' ? `/galaxy` : `/chat?name=${name}&room=${room}`}>
           <button className={'button mt-20'} onClick={post}>{rooms.includes(room.trim().toLowerCase()) ? 'Join' : 'Create'}</button>
+        </Link>
+        <Link to="/snake-game">
+          <button className="playsnakeBTN">
+            <GiSandSnake className="snakeIcon"/>
+            <img src={psg} alt="play snake game"></img>
+            <GiSandSnake className="snakeIcon"/>
+          </button>
         </Link>
       </div>
       <div className="roomList">

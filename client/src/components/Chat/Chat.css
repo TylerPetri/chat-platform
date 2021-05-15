@@ -26,18 +26,37 @@
 
 
 @media (max-width: 700px) {
-  .outerContainer {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-
   .chatContainer {
     width: 100%;
     height: 100%;
   }
+  @media (max-height: 666px) {
+    .outerContainer {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .appBg {
+      height: 100vh;
+    }
+  }
 }
+
+@media (max-height: 666px) {
+  .outerContainer {
+    height: 100vh !important;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .appBg {
+    height: 100vh;
+  }
+}
+
 
 @media (max-width: 400px) {
   .all {

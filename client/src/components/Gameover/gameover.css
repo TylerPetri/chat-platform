@@ -1,0 +1,34 @@
+.gameoverContainer {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6) 
+}
+
+.dropGameover {
+    margin: 250px auto;
+    width: 200px;
+    height: 300px;
+    background-color: rgb(46, 163, 75);
+    border-radius: 20px;
+}
+
+.goImg {
+    width: 100%;
+}
+
+.lastscore {
+    height: 30px;
+    width: 30px;
+    background-color: red;
+    margin-right: 7px;
+}
+
+.lastscorebox {
+    width: max-content;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+}

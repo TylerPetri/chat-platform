@@ -1,0 +1,93 @@
+.bigContainer {
+    border: 30px solid rgb(165, 101, 42);
+    height: max-content;
+    width: max-content;
+    border-radius: 25px;
+}
+
+.startContainer {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6) 
+}
+
+.dropStart {
+    margin: 250px auto;
+    width: 200px;
+    height: 350px;
+    background-color: rgb(46, 163, 75);
+    border-radius: 20px;
+}
+
+.countdownBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.countdownTimer {
+    position: relative;
+    top: 30%;
+    /* display: flex; */
+    /* align-items: center; */
+    background-color:rgba(0, 0, 0, 0.6);
+    font-size: 150px;
+    font-weight: 900;
+    color: rgb(183, 0, 255);
+    transition: 1s ease-in;
+    opacity: 1;
+    padding: 30px 0 20px;
+    font-family: 'Press Start 2P';
+}
+
+@supports (-webkit-text-stroke: 1px black) {
+    .countdownTimer {
+      -webkit-text-stroke: 1px orange;
+      -webkit-text-fill-color: rgb(183, 0, 255);
+    }
+  }
+
+.highscore {
+    padding-top: 20px;
+}
+
+.startBtn{
+    margin: 8px;
+    margin-top: 30px;
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    color: white;
+    background-color:cornflowerblue;
+    border: none;
+    font-family: 'Press Start 2P';
+    font-size: 15px;
+}
+
+.startBtn:hover, .exit:hover {
+    background-color: rgb(204, 204, 3);
+    color: purple
+}
+
+.exit {
+    margin: 8px;
+    margin-top: 10px;
+    height: 40px;
+    width: 110px;
+    border-radius: 10px;
+    color: white;
+    background-color:cornflowerblue;
+    border: none;
+    font-family: 'Press Start 2P';
+    font-size: 15px;
+}
+
+.moveKeys {
+    width: 50%;
+    margin-top: 20px;
+}
