@@ -71,6 +71,9 @@ function SignIn() {
             <GiSandSnake className="snakeIcon"/>
           </button>
         </Link>
+        <Link to='/crypto'>
+          <button className="playsnakeBTN">Crypto</button>
+        </Link>
       </div>
       <div className="roomList">
         <div className="containerHead">
