@@ -4,6 +4,7 @@ function fetchJSON( url, method='get', data={} ){
         method,
         headers: {
             'Content-Type': 'application/json',
+            'X-CMC_PRO_API_KEY': window.env.API_KEY
         }
     }
     if( method === 'post' || method === 'put' ) {

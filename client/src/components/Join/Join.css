@@ -24,8 +24,11 @@ html, body {
 }
 
 .joinInnerContainer {
-  max-width: 30%;
+  max-width: 90%;
   margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 
 .joinInput {
@@ -37,6 +40,7 @@ html, body {
 .logo {
   width: 50%;
   padding-bottom: 15px;
+  margin: 0 auto;
 }
 
 .button {
@@ -60,6 +64,19 @@ html, body {
   display: inline-block;
   border: none;
   width: 100%;
+  margin-top: 10px;
+}
+
+@media (min-width: 583px) {
+  .button, .playsnakeBTN, .joinInput {
+    width: 509.34px;
+  }
+  .logo {
+    width: 255px;
+  }
+}
+
+.cryptoBtn {
   margin-top: 10px;
 }
 

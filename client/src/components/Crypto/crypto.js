@@ -1,32 +1,37 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { FaSearch, FaSort } from 'react-icons/fa'
 import { AiOutlineReload } from 'react-icons/ai'
+import { IoChevronBack } from 'react-icons/io5'
 import fetchJSON from '../../utils/API'
 import './crypto.css'
 
 function Crypto (){
 
-    const [info, setInfo] = useState([{
-        name: 'bitcoin', 
-        price: {
-            price: 48000.85,
-            percent_change_1h: 0.15,
-            percent_change_24h: -16.14,
-            percent_change_7d: -2.90,
-            percent_change_30d: -21.65,
-        }
-    }])
+    const [info, setInfo] = useState([
+        // {
+        //     name: 'bitcoin', 
+        //     price: {
+        //         price: 48000.85,
+        //         percent_change_1h: 0.15,
+        //         percent_change_24h: -16.14,
+        //         percent_change_7d: -2.90,
+        //         percent_change_30d: -21.65,
+        //     }
+        // }
+    ])
     const [displayedList, setDisplayedList] = useState({
-        results: [{
-            name: 'bitcoin', 
-            price: {
-                price: 48000.85,
-                percent_change_1h: 0.15,
-                percent_change_24h: -16.14,
-                percent_change_7d: -2.90,
-                percent_change_30d: -21.65,
-            }
-        }],
+        results: [
+            // {
+            //     name: 'bitcoin', 
+            //     price: {
+            //         price: 48000.85,
+            //         percent_change_1h: 0.15,
+            //         percent_change_24h: -16.14,
+            //         percent_change_7d: -2.90,
+            //         percent_change_30d: -21.65,
+            //     }
+            // }
+        ],
         sortOrderName: "",
         sortOrderPrice: "",
         sortOrder1h: "",
@@ -224,6 +229,9 @@ function Crypto (){
     return (
         <>
         <div className="cryptoBackground">
+            <a href="/">
+                <IoChevronBack className="backCrypto"/>
+            </a>
         <div className="searchCont">
         <div>
             <input className="cryptoSearchInput" spellCheck='false' placeholder="Search Crypto" ref={cryptoInput} onKeyDown={submit.bind(this)}/>
@@ -261,7 +269,7 @@ function Crypto (){
             })}
             </table>
             :
-            <h3>No data</h3>
+            <h3 style={{margin: '40px auto', width: 'max-content'}}>No data</h3>
             }
         </div>
         </>

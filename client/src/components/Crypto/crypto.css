@@ -1,7 +1,19 @@
+.backCrypto {
+    margin-bottom: 50px;
+    height: 30px;
+    width: 30px;
+    color:rgb(111, 0, 255)
+}
+
+.backCrypto:hover {
+    cursor: pointer;
+}
+
 .cryptoBackground {
     color: white;
     background-color: rgb(34, 34, 34);
     padding: 50px;
+    min-height: 100vh;
 }
 
 .searchCont {
