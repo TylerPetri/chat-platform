@@ -241,7 +241,7 @@ function Crypto (){
             <button className={loading ? "loadingBtn" : "cryptoResetBtn"} onClick={() => update()}><AiOutlineReload className="resetIcon"/></button>
         </div>
         </div>
-            {/* {displayedList.results.length > 0 ?
+            {displayedList.results.length > 0 ?
             <table>
             <thead>
                 <tr>
@@ -268,12 +268,12 @@ function Crypto (){
                 )
             })}
             </table>
-            : */}
+            :
             <div style={{margin: '40px auto', width: 'max-content'}}>
                 <h3 style={{textAlign: 'center'}}>No data</h3>
                 <h3>Fixing mobile issues</h3>
             </div>
-            {/* } */}
+            }
         </div>
         </>
     )
