@@ -53,6 +53,18 @@ function SignIn() {
 
   return (
     <div className="joinOuterContainer">
+      <div className="items">
+        <Link to="/snake-game">
+          <button className="playsnakeBTN">
+            <GiSandSnake className="snakeIcon"/>
+            <img src={psg} alt="play snake game"></img>
+            <GiSandSnake className="snakeIcon"/>
+          </button>
+        </Link>
+        <Link to='/crypto'>
+          <button className="playsnakeBTN">Crypto</button>
+        </Link>
+      </div>
       <div className="joinInnerContainer">
         <img src={logo} alt="logo" className="logo"></img>
         <div>
@@ -63,16 +75,6 @@ function SignIn() {
         </div>
         <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={room.trim().toLowerCase() === 'galaxy' ? `/galaxy` : `/chat?name=${name}&room=${room}`}>
           <button className={'button mt-20'} onClick={post}>{rooms.includes(room.trim().toLowerCase()) ? 'Join Room' : 'Create Room'}</button>
-        </Link>
-        <Link to="/snake-game">
-          <button className="playsnakeBTN">
-            <GiSandSnake className="snakeIcon"/>
-            <img src={psg} alt="play snake game"></img>
-            <GiSandSnake className="snakeIcon"/>
-          </button>
-        </Link>
-        <Link to='/crypto'>
-          <button className="button cryptoBtn">Crypto</button>
         </Link>
       </div>
       <div className="roomList">
