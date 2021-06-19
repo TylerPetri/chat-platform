@@ -61,9 +61,9 @@ function SignIn() {
             <GiSandSnake className="snakeIcon"/>
           </button>
         </Link>
-        <Link to='/crypto'>
+        {/* <Link to='/crypto'>
           <button className="playsnakeBTN">Crypto</button>
-        </Link>
+        </Link> */}
       </div>
       <div className="joinInnerContainer">
         <img src={logo} alt="logo" className="logo"></img>
