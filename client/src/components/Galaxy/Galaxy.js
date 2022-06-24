@@ -21,7 +21,7 @@ function Galaxy(){
                 </a>
                 <ReactPlayer 
                 className="galaxyVid"
-                url="https://www.youtube.com/watch?v=Z6FPJOgfCkc&list=RDZ6FPJOgfCkc&start_radio=1"
+                url="https://www.youtube.com/watch?v=Z6FPJOgfCkc"
                 playing={true}
                 width='70%'
                 alt="Galaxy supernova by girls generation"
